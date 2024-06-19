@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Overview | Fantastic Panda</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/favicons/favicon.ico" type="image/x-icon">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Functions</h1>
+        <hr class="desktop-only">
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-item">Home</a>
+            <a href="../contents.html" class="navbar-item">Guide</a>
+        </nav>
+        <hr class="desktop-only">
+        <br class="mobile-only">
+    </header>
+    <main>
+        <p>It is actually very simple defining a function. All code blocks are objects of type function. Thus, they can be stored in a variable.</p>
+        <p>Here is an example:</p>
+        <code>
+            { <br>
+                let sayHi be {<br>
+                    console.output("Hi!")<br>
+                }<br>
+            }
+        </code>
+        <p>To accept arguments, add a set of brackets before the opening `{`, and there you can add arguments with optional type annotations.</p>
+        <code>
+            {<br>
+                let add be (x type number, y type number) be {<br>
+                    console.output(x + y)<br>
+                }<br>
+            }
+        </code>
+        <p>Note that passing arguments with types different than annotated will cause a <code>TypeError</code>.</p>
+        <p>It is possible to accept a dynamic number of arguments. To do so, add a star as the last argument, then access args[index] as whatever argument.</p>
+        <code>
+            {<br>
+                let add be (*) {<br>
+                    console.output(args[0] + args[1])<br>
+                }<br>
+            }
+        </code>
+        <p>Please note - you cannot annotate the star.</p>
+        <p class="big-h2">Returns</p>
+        <p>Anything after the return keyword will be returned. Keep in mind the keyword only accepts one argument and will raise an <code>ArgumentError</code> if more are provided.</p>
+        <p>To quit function execution prematurely, use the built-in <code>lexit()</code> (local exit) function.</p>
+        <p>Example:</p>
+        <code>
+            {<br>
+                let add be (*) {<br>
+                    return args[0] + args[1]<br>
+                }<br>
+            }
+        </code>
+    </main>
+    <hr>
+    <div class="paginator">
+        <a href="variables.html" class="paginator-item">Previous | Variables</a>
+        <a href="types.html" class="paginator-item">Next | Classes</a>
+    </div>
+    <hr>
+    <footer>
+        <p>Copyright Fantastic Panda&copy; 2024.</p>
+    </footer>
+</body>
+</html>

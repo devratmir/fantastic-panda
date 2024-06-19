@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables | Fantastic Panda</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/favicons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Variables</h1>
+        <hr class="desktop-only">
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-item">Home</a>
+            <a href="../contents.html" class="navbar-item">Guide</a>
+        </nav>
+        <hr class="desktop-only">
+        <br class="mobile-only">
+    </header>
+    <main>
+        <p>If you've read how the language works, you know that everything is an object, variables not excluded. All variables have an automatically inferred type, and a value, which could be of type <code>none</code>.</p>
+        <p>Variables are defined with the <code>let</code> keyword followed by a variable name, then an assignment operator, then the value of the variable.</p>
+        <p>There are two assignment operators in Fantastic Panda: <code>be</code> and <code>=</code>, both of which used to assign values to variables.</p>
+        <p>Example:</p>
+        <code>let myVar be 55</code>
+        <p>One exciting feature of FP is dynamic naming. To access a variable's name instead of the variable itself, precede it with an &. This allows for things like:</p>
+        <code>let anotherVar = "var2"</code><br>
+        <code>let &anotherVar = "value"</code>
+        <p>This creates a variable with name <code>var2</code> and value "value"</p>
+        <p>While it is possible to create your own types (classes), some types are already built into the language.</p>
+        <p>They are:</p>
+        <ul>
+            <li><code>none</code></li>
+            <li><code>string</code></li>
+            <li><code>number</code></li>
+            <li><code>boolean</code></li>
+            <li><code>function</code></li>
+            <li><code>type</code></li>
+        </ul>
+        <p>Let's compare them and see what they are used for.</p>
+        <table>
+            <tr>
+                <th class="text">Type</th>
+                <th class="text">Values</th>
+                <th class="text">Notes</th>
+            </tr>
+            <tr>
+                <td><code>none</code></td>
+                <td class="text">Anything</td>
+                <td class="text">Not a keyword</td>
+            </tr>
+            <tr>
+                <td><code>string</code></td>
+                <td class="text">Text</td>
+                <td class="text">Written inside <code>""</code> or <code>''</code></td>
+            </tr>
+            <tr>
+                <td><code>number</code></td>
+                <td class="text">Any number including decimals.</td>
+                <td class="text">-</td>
+            </tr>
+            <tr>
+                <td><code>boolean</code></td>
+                <td class="text"><code>true</code>, <code>false</code></td>
+                <td class="text">There are two values</td>
+            </tr>
+            <tr>
+                <td><code>function</code></td>
+                <td class="text">A block of code</td>
+                <td class="text">-</td>
+            </tr>
+            <tr>
+                <td><code>type</code></td>
+                <td class="text">A type (or class)</td>
+                <td class="text">-</td>
+            </tr>
+        </table>
+        <p>All variables have a type, but variables are also objects, so they must have a class, right? Well, in Fantastic Panda, <b>classes ARE types</b>, and types have all the features of classes, so it is not wrong to use the two words interchangeably.</p>
+        <p>Type annotation is done with the type keyword. It must be followed by a type, and placed after the variable name in the declaration statement.</p>
+        <p>Example:</p>
+        <code>let myVar type number be 11</code>
+        <p>Lastly, the <code>let</code> keyword is only needed if the variable doesn't exist. It is not needed for redefining.</p>
+    </main>
+    <hr>
+    <div class="paginator">
+        <a href="overview.html" class="paginator-item">Previous | Syntax Overview</a>
+        <a href="functions.html" class="paginator-item">Next | Functions</a>
+    </div>
+    <hr>
+    <footer>
+        <p>Copyright Fantastic Panda&copy; 2024.</p>
+    </footer>
+</body>
+</html>

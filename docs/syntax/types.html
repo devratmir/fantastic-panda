@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes | Fantastic Panda</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/favicons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Classes and Types</h1>
+        <hr class="desktop-only">
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-item">Home</a>
+            <a href="../contents.html" class="navbar-item">Guide</a>
+        </nav>
+        <hr class="desktop-only">
+        <br class="mobile-only">
+    </header>
+    <main>
+        <p>As mentioned previously, in FP, types and classes are the same, just used in different contexts. <code>type</code> is a property of an object, whereas <code>CLASS</code> is a keyword used to define classes. Classes are also objects and can be stored in a variable or passed into a function.</p>
+        <p>To define a class, use the <code>CLASS</code> keyword, followed by a code block. Inside the code block, add any variables (which can be accessed with class.variable or object.variable at any point), but most importantly, two <b>private</b> methods: <code>_create</code> and <code>_setup</code>. Let's deine them in more detail: </p>
+        <code>_create</code>
+        <ul>
+            <li class="text">Accept no arguments.</li>
+            <li class="text">Creates the object.</li>
+            <li class="text">Is ran by the interpreter when the class is called.</li>
+            <li class="text">Must return something.</li>
+            <li class="text">Is a <b>private</b> method.</li>
+        </ul>
+        <code>_setup</code>
+        <ul>
+            <li class="text">Is meant for initialising the object;</li>
+            <li class="text">Can accept as many arguments as needed;</li>
+            <li class="text">Can return anything including <code>none</code>;</li>
+            <li class="text">Is ran by the interpreter after <code>_create</code>;</li>
+            <li class="text">Is also a <b>private</b> method.</li>
+        </ul>
+        <p>Since classes are really just code blocks with methods and variables, you'd be completely right if you said that the entire program is a class, just without the keyword.</p>
+        <p>You can create objects of the class by calling the class.</p>
+        <p>Example:</p>
+        <code>
+            {<br>
+                let Dog be CLASS {<br>
+                    _setup be() {<br>
+                        console.output("Created dog!")<br>
+                    }<br>
+                }<br>
+                let myDog be Dog() // Output: Created dog!<br>
+            }    
+        </code>
+        <p>As you can see, there is no <code>_create</code> method. This will not create an error because by default everything has both of them. However, when you create a class and define them you essentially overwrite them, and it is also why the 'let' keyword wasn't used (the variable already exists).</p>
+        <p>But back to the idea that the entire program is a class is actually wrong. In Fantastic Panda, classes can ONLY be created with the class keyword, but a code block with its own code variables and functions is an <b>object</b>.</p>
+        <p>Yes, that does mean that you do not need to define a class to make one single object.</p>
+        <p><b>private</b> methods are mentioned, but what are they?</p>
+        <div class="big-h2 text">Private and Public</div></div>
+        <p>By default, everything is <b>public</b> (not to be confused with <a href="variables.html#var-scope">local and global</a>). That means any object can access and, if possible, run it at any time.</p>
+        <p>However, anything <b>private</b> can only be called by the interpreter and never directly in the code.</p>
+    </main>
+    <hr>
+    <div class="paginator">
+        <a href="functions.html" class="paginator-item">Previous | Functions</a>
+    </div>
+    <hr>
+    <footer>
+        <p>Copyright Fantastic Panda&copy; 2024.</p>
+    </footer>
+</body>
+</html>

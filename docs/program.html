@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <style>
+        /* body {
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <hr class="desktop-only">
+    <nav class="navbar">
+        <a href="index.html" class="navbar-item">Home</a>
+        <a href="contents.html" class="navbar-item">Guide</a>
+    </nav>
+    <hr class="desktop-only">
+    <br class="mobile-only">
+    <div id="hello-world">
+        <title>Hello, world program</title>
+        <h1>Hello, world program</h1>
+        <p>Assuming you've read how the language works, you know that everything is an object. Variables, functions, and even clases themselves are objects.</p>
+        <p>The output to console command is the <code>output</code> method of the <code>console</code> object, so to output something, you would call <code>console.output()</code>:</p>
+        <code>console.output("Hello, world!")</code>
+        <p>Of course, you could also do <code>let output be "Hello world!"; console.output(&output);</code></p>
+        <p>This is it on this tutorial, please know that more tutorials are coming!</p>
+    </div>
+    <script>
+        let hash = window.location.hash;
+        if (hash == "#hello-world") {
+            document.getElementById("hello-world").style.display = "block";
+        }
+        else {
+            document.getElementById("hello-world").style.display = "none";
+            window.location.href = "contents.html"
+        }
+    </script>
+</body>
+</html>
